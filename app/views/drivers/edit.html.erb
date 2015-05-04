@@ -1,0 +1,30 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Edit a Driver</h2>
+
+
+<%= form_tag "/drivers/#{@driver.id}", :method => 'patch' do %>
+  <p><label>Brand:</label> <input value="<%= @driver.brand %>" name="brand" size="30"></p>
+  <p><label>Name:</label> <input value="<%= @driver.name %>" name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" value="<%= @driver.price / 100.0 %>"></p>
+  <p><label>Driver URL:</label> <input value="<%= @driver.driver_url %>" name="url" size="80"></p>
+  <div>
+    <label>Launch: </label>
+    <select name="launch" value="<%= @driver.launch %>">
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <div>
+    <label>Spin: </label>
+    <select name="spin" value="<%= @driver.spin %>">
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1><%= link_to "Jake's Final", "/" %>
+
+      <small><%= link_to "Ball", '/balls' %></small>
+      <small><%= link_to "Driver", '/drivers' %></small>
+    </h1>
+
+    <%= yield %>
+
+  </div>
+
+</body>
+</html>

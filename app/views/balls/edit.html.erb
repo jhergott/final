@@ -1,0 +1,22 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Edit a Ball</h2>
+
+
+<%= form_tag "/balls/#{@ball.id}", :method => 'patch' do %>
+  <p><label>Brand:</label> <input value="<%= @ball.brand %>" name="brand" size="30"></p>
+  <p><label>Name:</label> <input value="<%= @ball.name %>" name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" value="<%= @ball.price / 100.0 %>"></p>
+  <p><label>Ball URL:</label> <input value="<%= @ball.ball_url %>" name="url" size="80"></p>
+  <div>
+    <label>Compression: </label>
+    <select name="compression" value="<%= @ball.compression %>">
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

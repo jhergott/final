@@ -1,0 +1,29 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Add a New Driver</h2>
+
+<%= form_tag "/drivers" do %>
+  <p><label>Brand:</label> <input name="brand" size="30"></p>
+  <p><label>Name:</label> <input name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" ></p>
+  <p><label>Driver URL:</label> <input name="url" size="80"></p>
+  <div>
+    <label>Launch: </label>
+    <select name="launch" >
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <div>
+    <label>Spin: </label>
+    <select name="spin" >
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

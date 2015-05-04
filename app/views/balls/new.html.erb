@@ -1,0 +1,21 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Add a New Ball</h2>
+
+<%= form_tag "/balls" do %>
+  <p><label>Brand:</label> <input name="brand" size="30"></p>
+  <p><label>Name:</label> <input name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" ></p>
+  <p><label>Ball URL:</label> <input name="url" size="80"></p>
+  <div>
+    <label>Compression: </label>
+    <select name="compression" >
+      <option>High</option>
+      <option>Mid</option>
+      <option>Low</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

@@ -1,0 +1,20 @@
+<style>
+  h1 {
+    border-bottom: solid 3px gray;
+    margin-bottom: 24px;
+  }
+</style>
+
+<p><%= link_to "Add a New Driver", "/drivers/new" %></p>
+
+<ul>
+
+  <% @drivers.each do |driver| %>
+    <li>
+      <%= link_to driver.name, "/drivers/#{driver.id}" %>
+      (<%= number_to_currency(driver.price / 100.0) %>)
+      <%= link_to "(delete)", "/drivers/#{driver.id}", :method => 'delete' %>
+    </li>
+  <% end %>
+
+</ul>
