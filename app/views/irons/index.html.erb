@@ -1,0 +1,20 @@
+<style>
+  h1 {
+    border-bottom: solid 3px gray;
+    margin-bottom: 24px;
+  }
+</style>
+
+<p><%= link_to "Add a New Iron", "/irons/new" %></p>
+
+<ul>
+
+  <% @irons.each do |iron| %>
+    <li>
+      <%= link_to iron.name, "/irons/#{iron.id}" %>
+      (<%= number_to_currency(iron.price / 100.0) %>)
+      <%= link_to "(delete)", "/irons/#{iron.id}", :method => 'delete' %>
+    </li>
+  <% end %>
+
+</ul>

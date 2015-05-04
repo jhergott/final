@@ -1,0 +1,21 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Add a New Iron</h2>
+
+<%= form_tag "/irons" do %>
+  <p><label>Brand:</label> <input name="brand" size="30"></p>
+  <p><label>Name:</label> <input name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" ></p>
+  <p><label>Iron URL:</label> <input name="url" size="80"></p>
+  <div>
+    <label>Category: </label>
+    <select name="category" >
+      <option>Better-Player</option>
+      <option>Game-Improvement</option>
+      <option>Max Game-Improvement</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

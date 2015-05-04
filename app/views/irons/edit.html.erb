@@ -1,0 +1,22 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Edit an Iron</h2>
+
+
+<%= form_tag "/irons/#{@iron.id}", :method => 'patch' do %>
+  <p><label>Brand:</label> <input value="<%= @iron.brand %>" name="brand" size="30"></p>
+  <p><label>Name:</label> <input value="<%= @iron.name %>" name="name" size="30"></p>
+  <p><label>Price:</label> <input name="price" value="<%= @iron.price / 100.0 %>"></p>
+  <p><label>Iron URL:</label> <input value="<%= @iron.iron_url %>" name="url" size="80"></p>
+  <div>
+    <label>Category: </label>
+    <select name="category" value="<%= @iron.category %>">
+      <option>Better-Player</option>
+      <option>Game-Improvement</option>
+      <option>Max Game-Improvement</option>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

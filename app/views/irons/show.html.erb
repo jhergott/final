@@ -1,0 +1,38 @@
+<style>
+  h2 {
+    color: white;
+    background: #006;
+    padding: 6px;
+    text-align: center;
+  }
+  .price {
+    color: green;
+    border: solid 3px green;
+    padding: 4px;
+  }
+  img {
+    float: left;
+    margin-right: 40px;
+    box-shadow: 8px 8px 4px gray;
+    height: "200px";
+  }
+  p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+</style>
+
+<h2><%= @iron.name %></h2>
+<h4><%= @iron.brand %></h4>
+
+<p>Category: <%= @iron.category %></p>
+
+<p>
+  <span class="price">Price: <%= number_to_currency @iron.price/100.0 %></span>
+  <%= link_to "Edit", "/irons/#{@iron.id}/edit" %>
+</p>
+
+<div>
+<%= image_tag @iron.iron_url, size: '500x500' %>
+
+<p></p>

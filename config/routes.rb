@@ -28,4 +28,17 @@ Rails.application.routes.draw do
 
   delete '/drivers/:id' => 'drivers#destroy'
 
+  # The Golded 7 for the Iron model
+
+  get '/irons/new' => 'irons#new'
+  post '/irons' => 'irons#create'
+
+  get '/irons' => 'irons#index'
+  get '/irons/:id' => 'irons#show', as: 'iron'
+
+  get '/irons/:id/edit' => 'irons#edit'
+  patch '/irons/:id' => 'irons#update'
+
+  delete '/irons/:id' => 'irons#destroy'
+
 end

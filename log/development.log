@@ -3635,3 +3635,391 @@ Processing by DriversController#show as HTML
   [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 21]]
   Rendered drivers/show.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:38:41 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (2.3ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 265ms (Views: 215.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:38:42 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/balls/new" for ::1 at 2015-05-04 12:38:44 -0500
+Processing by BallsController#new as HTML
+  Rendered balls/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/balls" for ::1 at 2015-05-04 12:38:45 -0500
+Processing by BallsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b5ZJhjf71UWcEBkEkUhWDXbmLTpBw6/52DFYNEwD7SNZVYQzQoKXVFuSKUvIKkz9HR5xnu/8aiQiyw3f30hY7Q==", "brand"=>"", "name"=>"", "price"=>"", "url"=>"", "compression"=>"High"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", ""], ["name", ""], ["price", 0], ["ball_url", ""], ["compression", "High"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/balls
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/balls" for ::1 at 2015-05-04 12:38:45 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.1ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/balls/26" for ::1 at 2015-05-04 12:38:46 -0500
+Processing by BallsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jf65CAIyQzEOMtpRVsNNcLj9CT14xrXsBtq32O6JNFS7PXS9d0sBIMmw6h4PoVeA0wVVmdb5cDH8IOIzfcKBmg==", "id"=>"26"}
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "balls" WHERE "balls"."id" = ?[0m  [["id", 26]]
+Redirected to http://localhost:3000/balls
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/balls" for ::1 at 2015-05-04 12:38:46 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/balls/24" for ::1 at 2015-05-04 12:38:47 -0500
+Processing by BallsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered balls/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/balls/24/edit" for ::1 at 2015-05-04 12:38:48 -0500
+Processing by BallsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered balls/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/balls/24" for ::1 at 2015-05-04 12:38:50 -0500
+Processing by BallsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvNN6sWXMiGLJkVD/QXGLiflsGl9AfZdpqqw0fJrLHt0MIBfsO5wMEykdQykZ9zeTB3szdM+M4BcUOU6YSCZtQ==", "brand"=>"Titleist", "name"=>"Titleist DT Solo", "price"=>"19.99", "url"=>"http://www.palmbeachgolfcenter.com/images/products/detail/titleist_dt.jpg", "compression"=>"High", "id"=>"24"}
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "balls" SET "price" = ?, "compression" = ? WHERE "balls"."id" = ?[0m  [["price", 1998], ["compression", "High"], ["id", 24]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/balls/24
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/balls/24" for ::1 at 2015-05-04 12:38:50 -0500
+Processing by BallsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered balls/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers" for ::1 at 2015-05-04 12:38:53 -0500
+Processing by DriversController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT "drivers".* FROM "drivers"
+  Rendered drivers/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/21" for ::1 at 2015-05-04 12:38:54 -0500
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mDriver Load (0.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 21]]
+  Rendered drivers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/21/edit" for ::1 at 2015-05-04 12:38:56 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 21]]
+  Rendered drivers/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/drivers/21" for ::1 at 2015-05-04 12:38:57 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRMhJ80aMlrxt7K94+H9ZZUI6cY4LgdSjv0ZA+NAyru30OySuGNwSzY1gvK6g+eV/vC1YpYRwo90B0zocAt/dQ==", "brand"=>"Ping", "name"=>"Ping G30 SF Tec Driver", "price"=>"349.0", "url"=>"http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg", "launch"=>"High", "spin"=>"High", "id"=>"21"}
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/drivers/21
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/21" for ::1 at 2015-05-04 12:38:57 -0500
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 21]]
+  Rendered drivers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers/21/edit" for ::1 at 2015-05-04 12:38:58 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 21]]
+  Rendered drivers/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/drivers/21" for ::1 at 2015-05-04 12:38:59 -0500
+Processing by DriversController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOEk49LdEOhI88xs2oK6sg3v7GzrAx44YMPLZHFv7rgOIulWp6RS+Y9x/COD4KBCZhewyEU82+WaOZ6P4iRbdg==", "brand"=>"Ping", "name"=>"Ping G30 SF Tec Driver", "price"=>"349.0", "url"=>"http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg", "launch"=>"High", "spin"=>"Mid", "id"=>"21"}
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "drivers" SET "spin" = ? WHERE "drivers"."id" = ?  [["spin", "Mid"], ["id", 21]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/drivers/21
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers/21" for ::1 at 2015-05-04 12:38:59 -0500
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 21]]
+  Rendered drivers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-04 12:39:02 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:03 -0500
+Processing by IronsController#index as HTML
+  [1m[35mIron Load (0.1ms)[0m  SELECT "irons".* FROM "irons"
+  Rendered irons/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/irons/new" for ::1 at 2015-05-04 12:39:04 -0500
+Processing by IronsController#new as HTML
+  Rendered irons/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/irons" for ::1 at 2015-05-04 12:39:06 -0500
+Processing by IronsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D9xQT1Ykvt5IMMgnu+gRZQTbuzv7I2/QWa3qVFYUYpg5H536I138z4+y+GjiiguVbyPnn1Ucqg2jV7+/xV/XVg==", "brand"=>"", "name"=>"", "price"=>"", "url"=>"", "category"=>"Better-Player"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)  [["brand", ""], ["name", ""], ["price", 0], ["iron_url", ""], ["category", "Better-Player"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/irons
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:06 -0500
+Processing by IronsController#index as HTML
+  [1m[35mIron Load (0.6ms)[0m  SELECT "irons".* FROM "irons"
+  Rendered irons/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/irons/16" for ::1 at 2015-05-04 12:39:07 -0500
+Processing by IronsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Nv2zLf4mjv8l8xt+AX7Jflr713xupyNFgMIOy8H9/+gAPn6Yi1/M7uJxKzFYHNOOMQOL2MCY5ph6OFsgUrZKJg==", "id"=>"16"}
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "irons" WHERE "irons"."id" = ?[0m  [["id", 16]]
+Redirected to http://localhost:3000/irons
+Completed 302 Found in 2ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:07 -0500
+Processing by IronsController#index as HTML
+  [1m[35mIron Load (0.2ms)[0m  SELECT "irons".* FROM "irons"
+  Rendered irons/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/irons/13" for ::1 at 2015-05-04 12:39:10 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered irons/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons/13/edit" for ::1 at 2015-05-04 12:39:15 -0500
+Processing by IronsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered irons/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/irons/13" for ::1 at 2015-05-04 12:39:18 -0500
+Processing by IronsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FrkuTBi80zqqnjCXoJCb2OwelL2dU4dESB4nMm+5E7mmSkMRRuxXS0oSI0H4FifCEgm9lhKi8Dr2i13WvVRgA==", "brand"=>"Cobra", "name"=>"Cobra Fly-Z Irons", "price"=>"800.0", "url"=>"http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg", "category"=>"Game-Improvement", "id"=>"13"}
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/irons/13
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/irons/13" for ::1 at 2015-05-04 12:39:18 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered irons/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons/13/edit" for ::1 at 2015-05-04 12:39:19 -0500
+Processing by IronsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered irons/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/irons/13" for ::1 at 2015-05-04 12:39:21 -0500
+Processing by IronsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bBqk5L354fXgI9X9QvMyrB5qzz8jZIZfSfLhZXy7Drxa2WlRyICj5Ceh5bIbkShcdZKTm41bQ4KzCLSO7/C7cg==", "brand"=>"Cobra", "name"=>"Cobra Fly-Z Irons", "price"=>"800.0", "url"=>"http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg", "category"=>"Better-Player", "id"=>"13"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "irons" SET "category" = ? WHERE "irons"."id" = ?  [["category", "Better-Player"], ["id", 13]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/irons/13
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/irons/13" for ::1 at 2015-05-04 12:39:21 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered irons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:25 -0500
+Processing by IronsController#index as HTML
+  [1m[36mIron Load (0.2ms)[0m  [1mSELECT "irons".* FROM "irons"[0m
+  Rendered irons/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/irons/15" for ::1 at 2015-05-04 12:39:26 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered irons/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:27 -0500
+Processing by IronsController#index as HTML
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT "irons".* FROM "irons"[0m
+  Rendered irons/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons/new" for ::1 at 2015-05-04 12:39:29 -0500
+Processing by IronsController#new as HTML
+  Rendered irons/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/irons" for ::1 at 2015-05-04 12:39:38 -0500
+Processing by IronsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yRWSbL4ND1RjbBkyuGRzCyUJ6ECY1yOhThoPHMvc6Db/1l/Zy3RNRaTuKX3hBmn7TvG05Dbo5ny04Fr3WJdd+A==", "brand"=>"iron", "name"=>"iron", "price"=>"44", "url"=>"dkndjndj", "category"=>"Better-Player"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "iron"], ["name", "iron"], ["price", 4400], ["iron_url", "dkndjndj"], ["category", "Better-Player"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/irons
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:38 -0500
+Processing by IronsController#index as HTML
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT "irons".* FROM "irons"[0m
+  Rendered irons/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons/17" for ::1 at 2015-05-04 12:39:39 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered irons/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/dkndjndj" for ::1 at 2015-05-04 12:39:39 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/dkndjndj"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/jakehergott/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jakehergott/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jakehergott/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.9ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:43 -0500
+Processing by IronsController#index as HTML
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT "irons".* FROM "irons"[0m
+  Rendered irons/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/irons/17" for ::1 at 2015-05-04 12:39:44 -0500
+Processing by IronsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Yf3SBdeq50RuiwVML3GxTTxi5BG+VG1BiX0Ly8giXSNXPh+wotOlVakJNQN2E6u9V5q4tRBrqJxzh14gW2no7Q==", "id"=>"17"}
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "irons" WHERE "irons"."id" = ?  [["id", 17]]
+Redirected to http://localhost:3000/irons
+Completed 302 Found in 2ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-04 12:39:44 -0500
+Processing by IronsController#index as HTML
+  [1m[36mIron Load (0.2ms)[0m  [1mSELECT "irons".* FROM "irons"[0m
+  Rendered irons/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.2ms)
