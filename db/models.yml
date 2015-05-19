@@ -1,3 +1,7 @@
+User
+  email: string
+  password: string
+
 Ball
   brand: string
   name: string

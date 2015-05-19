@@ -2,43 +2,54 @@ Rails.application.routes.draw do
 
   root 'balls#index'
 
-  # The Golded 7 for the Ball model
+  get "/signup" => 'users#new'
+  post "/users" => 'users#create'
 
-  get '/balls/new' => 'balls#new'
-  post '/balls' => 'balls#create'
+  get "/login" => 'sessions#new'
+  post "/sessions" => 'sessions#create'
+  delete "/logout" => 'sessions#destroy'
 
-  get '/balls' => 'balls#index'
-  get '/balls/:id' => 'balls#show', as: 'ball'
+  resources :balls
+  resources :drivers
+  resources :irons
 
-  get '/balls/:id/edit' => 'balls#edit'
-  patch '/balls/:id' => 'balls#update'
+  # # The Golded 7 for the Ball model
 
-  delete '/balls/:id' => 'balls#destroy'
+  # get '/balls/new' => 'balls#new'
+  # post '/balls' => 'balls#create'
 
-  # The Golded 7 for the Driver model
+  # get '/balls' => 'balls#index'
+  # get '/balls/:id' => 'balls#show', as: 'ball'
 
-  get '/drivers/new' => 'drivers#new'
-  post '/drivers' => 'drivers#create'
+  # get '/balls/:id/edit' => 'balls#edit'
+  # patch '/balls/:id' => 'balls#update'
 
-  get '/drivers' => 'drivers#index'
-  get '/drivers/:id' => 'drivers#show', as: 'driver'
+  # delete '/balls/:id' => 'balls#destroy'
 
-  get '/drivers/:id/edit' => 'drivers#edit'
-  patch '/drivers/:id' => 'drivers#update'
+  # # The Golded 7 for the Driver model
 
-  delete '/drivers/:id' => 'drivers#destroy'
+  # get '/drivers/new' => 'drivers#new'
+  # post '/drivers' => 'drivers#create'
 
-  # The Golded 7 for the Iron model
+  # get '/drivers' => 'drivers#index'
+  # get '/drivers/:id' => 'drivers#show', as: 'driver'
 
-  get '/irons/new' => 'irons#new'
-  post '/irons' => 'irons#create'
+  # get '/drivers/:id/edit' => 'drivers#edit'
+  # patch '/drivers/:id' => 'drivers#update'
 
-  get '/irons' => 'irons#index'
-  get '/irons/:id' => 'irons#show', as: 'iron'
+  # delete '/drivers/:id' => 'drivers#destroy'
 
-  get '/irons/:id/edit' => 'irons#edit'
-  patch '/irons/:id' => 'irons#update'
+  # # The Golded 7 for the Iron model
 
-  delete '/irons/:id' => 'irons#destroy'
+  # get '/irons/new' => 'irons#new'
+  # post '/irons' => 'irons#create'
+
+  # get '/irons' => 'irons#index'
+  # get '/irons/:id' => 'irons#show', as: 'iron'
+
+  # get '/irons/:id/edit' => 'irons#edit'
+  # patch '/irons/:id' => 'irons#update'
+
+  # delete '/irons/:id' => 'irons#destroy'
 
 end

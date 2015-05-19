@@ -16,7 +16,24 @@
       <small><%= link_to "Ball", '/balls' %></small>
       <small><%= link_to "Driver", '/drivers' %></small>
       <small><%= link_to "Iron", '/irons' %></small>
+
+      <% if cookies["user_id"].present? %>
+        <small>Howdy, <%= User.find_by(id: cookies["user_id"]).email %></small>
+        <small><%= link_to "Sign Out", "/logout", :method => 'delete' %></small>
+      <% else %>
+          <small><%= link_to "Sign Up", '/signup' %></small>
+          <small><%= link_to "Sign In", '/login' %></small>
+
+      <% end %>
+
     </h1>
+
+    <% if notice.present? %>
+      <div class="alert alert-info"%>
+        <%= notice %>
+      </div>
+    <% end %>
+
 
     <%= yield %>
 
