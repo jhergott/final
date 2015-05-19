@@ -11,14 +11,13 @@
 
   <div class="container">
 
-    <h1><%= link_to "Jake's Final", "/" %>
+    <h1><%= link_to "Golf Stuff", "/" %>
 
       <small><%= link_to "Ball", '/balls' %></small>
       <small><%= link_to "Driver", '/drivers' %></small>
       <small><%= link_to "Iron", '/irons' %></small>
 
       <% if cookies["user_id"].present? %>
-        <small>Howdy, <%= User.find_by(id: cookies["user_id"]).email %></small>
         <small><%= link_to "Sign Out", "/logout", :method => 'delete' %></small>
       <% else %>
           <small><%= link_to "Sign Up", '/signup' %></small>
@@ -27,6 +26,10 @@
       <% end %>
 
     </h1>
+
+    <% if cookies["user_id"].present? %>
+        <h3>Welcome to Jake's Final, <%= User.find_by(id: cookies["user_id"]).email %>!</h3>
+    <% end %>
 
     <% if notice.present? %>
       <div class="alert alert-info"%>
