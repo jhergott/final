@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user
       if user.password == params[:password]
         cookies["user_id"] = user.id
-        redirect_to root_url, notice: "Welcome back!"
+        redirect_to root_url, notice: "Welcome back #{params[:email]}!"
       else
         redirect_to root_url, notice: "Unknown password."
       end
