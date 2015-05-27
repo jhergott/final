@@ -44,6 +44,7 @@ group :development, :test do
 end
 
   #Professor's gems
+  gem 'bcrypt'
   gem 'quiet_assets'
   gem 'ez'
 

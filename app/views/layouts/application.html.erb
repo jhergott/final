@@ -17,7 +17,7 @@
       <small><%= link_to "Driver", '/drivers' %></small>
       <small><%= link_to "Iron", '/irons' %></small>
 
-      <% if cookies["user_id"].present? %>
+      <% if session["user_id"].present? %>
         <small><%= link_to "Sign Out", "/logout", :method => 'delete' %></small>
       <% else %>
           <small><%= link_to "Sign Up", '/signup' %></small>
@@ -26,8 +26,8 @@
 
     </h1>
 
-    <% if cookies["user_id"].present? %>
-        <h3>Welcome to Jake's Final, <%= User.find_by(id: cookies["user_id"]).email %>!</h3>
+    <% if session["user_id"].present? %>
+        <h3>Welcome to Jake's Final, <%= User.find_by(id: session["user_id"]).email %>!</h3>
     <% end %>
 
     <% if notice.present? %>

@@ -5653,3 +5653,651 @@ Processing by UsersController#create as HTML
   [1m[35m (0.0ms)[0m  rollback transaction
   Rendered users/new.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 15:52:08 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (2.0ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 222ms (Views: 173.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 15:52:08 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 15:52:10 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 15:52:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XwqqTdJz8ik1ZiwDPDy+Ko48VSHJ4T32n1XDg/6fV/PHOjbMryETkas9Bq8jnb7Dd7TegsuUagQKTjxfxqurnA==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 15:52:16 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-27 15:52:18 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wiMe8i5UBFsmTG31XgjtCqw8+03CV6wFZZYEaDSBlppaE4JzUwbl47gXR1lBqe3jVbRw7sAi+/fwjfu0DLVq9Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 15:52:18 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 15:52:19 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 15:52:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lxpmbKMUxcFqzCCnaGqdgZ261SIFyfod1r/i0eG6EK4PKvrt3kYkefSXCgt3y51oZDJegQe8re9DpB0N2Y7swQ==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 15:52:23 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.5ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:12:47 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.4ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:12:49 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:12:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"86kaj25QiIPcp6QSHj1BvXErEGX+U2kZ9XF8LAIKUaZrmYYOEwJpO0L8jr4BnEFUiKObxvwmPutgaoPwOj6tyQ==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jake@jake.com"]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `authenticate' for #<User {"id"=>1, "email"=>"jake@jake.com", "password"=>"jake"}>):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.1ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.1ms)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "password_digest" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "ausers" ("id","email","password","password_digest") VALUES (1, 'jake@jake.com', 'jake', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "ausers" ("id","email","password","password_digest") VALUES (2, 'a', 'a', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "ausers" ("id","email","password","password_digest") VALUES (3, 'aaa@l.com', '22', NULL)[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "users" ("id","email","password_digest") VALUES (1, 'jake@jake.com', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "users" ("id","email","password_digest") VALUES (2, 'a', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "users" ("id","email","password_digest") VALUES (3, 'aaa@l.com', NULL)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "ausers"
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "balls"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Bridgestone"], ["name", "Bridgestone Tour B330"], ["price", 4499], ["ball_url", "http://geg.gmncdn.com/wp-content/uploads/2012/01/bstone-ball.jpg"], ["compression", "High"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Titleist"], ["name", "Titleist ProV1"], ["price", 4999], ["ball_url", "http://www.titleist.com/images/pressreleases/PROV1_flat.jpg"], ["compression", "High"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist DT Solo"], ["price", 1999], ["ball_url", "http://www.palmbeachgolfcenter.com/images/products/detail/titleist_dt.jpg"], ["compression", "Mid"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "TaylorMade"], ["name", "TaylorMade SuperDeep"], ["price", 1999], ["ball_url", "http://demandware.edgesuite.net/aais_prd/on/demandware.static/Sites-TMaG-Site/Sites-tmag-master-catalog/default/v1430641053918/hero/Super-Deep_Ball-Package_Lid_zoom.jpg"], ["compression", "Low"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "drivers"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Nike"], ["name", "Nike Vapor Pro Driver"], ["price", 39900], ["driver_url", "http://www.mcguirksgolf.com/v4/a636a571-361b-4659-a8dc-bf75b5a14aac/uploads/Nike%20Vapor%20Pro%20Driver%202.png"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)  [["brand", "Ping"], ["name", "Ping G30 SF Tec Driver"], ["price", 34900], ["driver_url", "http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg"], ["launch", "High"], ["spin", "Mid"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Callaway"], ["name", "Callaway XR Pro Driver"], ["price", 39900], ["driver_url", "http://www.pgatour.com/content/pgatour/equipmentreport/2015/01/15/callaway-xr-driver/_jcr_content/mainParsys/blog/blogLeftParsys/image.img.jpg/1421354971163.jpg"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "irons"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Cobra"], ["name", "Cobra Fly-Z Irons"], ["price", 80000], ["iron_url", "http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg"], ["category", "Game-Improvement"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist AP2 714 Irons"], ["price", 110000], ["iron_url", "http://www.mygolfspy.com/wp-content/uploads/2013/09/Titleist-714-AP2.jpg"], ["category", "Better-Player"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Ping"], ["name", "Ping Kartsen Irons"], ["price", 65000], ["iron_url", "http://pinggolf-blob.ping.com/pinggolf/uploadedimages/clubs/irons/karsten/beauty.png"], ["category", "Max Game-Improvement"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2015-05-27 16:14:49 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (1.1ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 205ms (Views: 166.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:14:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:14:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CpZJoZqcANQ9/jm6xWAzk5yJ6JMtdWd96Va9LDmCkdkGsWn+ziRu86s0kr0tIAnt/qsAU7Agm9ivqUoiNL2KA==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:3:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (37.1ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (83.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:20:01 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:20:01 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:20:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:20:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FYr5e7ip5KpHuUQ1HQNSBZ1EsV79TkLPFZmjzw+oQ32NumX6xfsFEtnibpkColLsZMw6/f87FT2AglwTN5y/Eg==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:3:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (78.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "balls"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Bridgestone"], ["name", "Bridgestone Tour B330"], ["price", 4499], ["ball_url", "http://geg.gmncdn.com/wp-content/uploads/2012/01/bstone-ball.jpg"], ["compression", "High"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Titleist"], ["name", "Titleist ProV1"], ["price", 4999], ["ball_url", "http://www.titleist.com/images/pressreleases/PROV1_flat.jpg"], ["compression", "High"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist DT Solo"], ["price", 1999], ["ball_url", "http://www.palmbeachgolfcenter.com/images/products/detail/titleist_dt.jpg"], ["compression", "Mid"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "TaylorMade"], ["name", "TaylorMade SuperDeep"], ["price", 1999], ["ball_url", "http://demandware.edgesuite.net/aais_prd/on/demandware.static/Sites-TMaG-Site/Sites-tmag-master-catalog/default/v1430641053918/hero/Super-Deep_Ball-Package_Lid_zoom.jpg"], ["compression", "Low"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "drivers"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Nike"], ["name", "Nike Vapor Pro Driver"], ["price", 39900], ["driver_url", "http://www.mcguirksgolf.com/v4/a636a571-361b-4659-a8dc-bf75b5a14aac/uploads/Nike%20Vapor%20Pro%20Driver%202.png"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)  [["brand", "Ping"], ["name", "Ping G30 SF Tec Driver"], ["price", 34900], ["driver_url", "http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg"], ["launch", "High"], ["spin", "Mid"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Callaway"], ["name", "Callaway XR Pro Driver"], ["price", 39900], ["driver_url", "http://www.pgatour.com/content/pgatour/equipmentreport/2015/01/15/callaway-xr-driver/_jcr_content/mainParsys/blog/blogLeftParsys/image.img.jpg/1421354971163.jpg"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "irons"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Cobra"], ["name", "Cobra Fly-Z Irons"], ["price", 80000], ["iron_url", "http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg"], ["category", "Game-Improvement"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist AP2 714 Irons"], ["price", 110000], ["iron_url", "http://www.mygolfspy.com/wp-content/uploads/2013/09/Titleist-714-AP2.jpg"], ["category", "Better-Player"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Ping"], ["name", "Ping Kartsen Irons"], ["price", 65000], ["iron_url", "http://pinggolf-blob.ping.com/pinggolf/uploadedimages/clubs/irons/karsten/beauty.png"], ["category", "Max Game-Improvement"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2015-05-27 16:20:50 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.9ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 230ms (Views: 197.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:20:51 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:20:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:20:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4OQL9abH9rm9VfzUJwczvQXbI/Mjtj9dBexrU2/5eRZ41Jd025UXASMO1ng4pjNU/FOoUCHDaK+Q95SPV82FeQ==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake.com"]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (21.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (110.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:22:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0t7OjUHPb3jZR+Uod0IhIYkY10RK3eRRw76q9nb0DMVK7lIMPJ2OwEccz4Ro4yHIcJBc50ios6NWpVUqTsDwqg==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jake@jake.com"]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.1ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:22:16 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.3ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:22:17 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.1ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:22:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:22:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtvsX3CxTqEw7/DhxeMscgOTupVQbDySM+Z2k0xtASze63DeDeOvGa602k3aQiyb+hsxNlIZa2Cm/YlPdFn9Qw==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake.com"]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (84.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:24:30 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.9ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 184ms (Views: 146.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:24:32 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-27 16:24:35 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2015-05-27 16:24:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CIwM4ft4i841SPEf2wSX8/xl5KqsVnOXyWWlA9H/wB2QvJBghipqdqsT27PEpZcaBe1vCa4jJGVcflrf6cs8cg==", "email"=>"jake@jake2.com", "password"=>"[FILTERED]", "commit"=>"Create Account!"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jake@jake2.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest") VALUES (?, ?)  [["email", "jake@jake2.com"], ["password_digest", "$2a$10$6w12aWG5Nt9gQUOnUJRw3.HiiqSpvfOGDb6ZZflsG0N9Z3XbgOTe."]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:24:42 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.1ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:24:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:24:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vQddcqAZDBzgoedWuNVNWEAI/Z8+No1p2OiQSJfvdEolN8Hz3UvtpH76zfqndE2xuYB2PDxD2ptN82+Ur9uIJQ==", "email"=>"jake@jake2.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake2.com"]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:25:01 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.3ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 45ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:25:02 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:25:05 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1WUHqN+ReuCZLkssnyQA9tN2XFodGQ9n6jk3D3+7ahlNVZsposObWAd1YYCAhQAfKv7X+R9sWJV/IsjTR4+Wdg==", "email"=>"jake@jake2.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake2.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:25:05 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.1ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-27 16:25:15 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cswxl98EOAtSZiGR+24V9Pn/w/gSGOEC5xGek9JqE9Hq/K0WolbZs8w9Cz3kzxUdAHdIWxBttvByCmFP6l7vvg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:25:15 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT "balls".* FROM "balls"
+  Rendered balls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:25:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:25:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cK1x2BSA9GhzHQCXxVoeTIir/gb/+Fs3B5JjFT2Y/cjone1ZadIV0O1GKjva+x6lcSN1pf2NDMWSiZzJBawBpw==", "email"=>"jake@jake.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jake@jake.com"]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.8ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (36.5ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (79.8ms)
+
+
+Started GET "/login" for ::1 at 2015-05-27 16:25:23 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-27 16:25:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7+KAfd2cuMdM4HeC2uE7f8Tv85H7Nzdda8Qnb+Jw6EB30hz8oM5Zf9K7XS7FQDuWPWd4MvlCYK/+39iz2kQULw==", "email"=>"jake@jake2.com", "password"=>"[FILTERED]", "commit"=>"Log in!"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jake@jake2.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 68ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-27 16:25:26 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  Rendered balls/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.3ms)

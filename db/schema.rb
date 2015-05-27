@@ -49,4 +49,9 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "pros", ["driver_id"], name: "index_pros_on_driver_id"
   add_index "pros", ["iron_id"], name: "index_pros_on_iron_id"
 
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+  end
+
 end
