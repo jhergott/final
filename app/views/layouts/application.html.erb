@@ -17,18 +17,22 @@
       <small><%= link_to "Driver", '/drivers' %></small>
       <small><%= link_to "Iron", '/irons' %></small>
 
+      <div class="pull-right">
       <% if session["user_id"].present? %>
         <small><%= link_to "Sign Out", "/logout", :method => 'delete' %></small>
       <% else %>
           <small><%= link_to "Sign Up", '/signup' %></small>
           <small><%= link_to "Sign In", '/login' %></small>
       <% end %>
+      </div>
 
     </h1>
 
+    <div class="pull-right">
     <% if session["user_id"].present? %>
         <h3>Welcome to Jake's Final, <%= User.find_by(id: session["user_id"]).email %>!</h3>
     <% end %>
+    </div>
 
     <% if notice.present? %>
       <div class="alert alert-info"%>
