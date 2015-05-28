@@ -1,0 +1,19 @@
+<style>
+  h1 {
+    border-bottom: solid 3px gray;
+    margin-bottom: 24px;
+  }
+</style>
+
+<p><%= link_to "Add a New Pro", "/pros/new" %></p>
+
+<ul>
+
+  <% @pros.each do |pro| %>
+    <li>
+      <%= link_to pro.name, "/pros/#{pro.id}" %>
+      <%= link_to "(delete)", "/pros/#{pro.id}", :method => 'delete' %>
+    </li>
+  <% end %>
+
+</ul>

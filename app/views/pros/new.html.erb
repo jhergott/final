@@ -1,0 +1,40 @@
+<style>
+  label { width: 100px; vertical-align: middle;}
+</style>
+
+<h2>Add a New Pro</h2>
+
+<%= form_tag "/pros" do %>
+  <p><label>Name:</label> <input name="name" size="30"></p>
+  <div>
+    <label for="driver_id">Driver: </label>
+    <select name="driver_id">
+      <% @drivers.each do |driver| %>
+        <option value="<%= driver.id %>">
+          <%= driver.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+  <div>
+    <label for="iron_id">Iron: </label>
+    <select name="iron_id">
+      <% @irons.each do |iron| %>
+        <option value="<%= iron.id %>">
+          <%= iron.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+  <div>
+    <label for="ball_id">Ball: </label>
+    <select name="ball_id">
+      <% @balls.each do |ball| %>
+        <option value="<%= ball.id %>">
+          <%= ball.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+  <p><button>Submit</button></p>
+<% end %>

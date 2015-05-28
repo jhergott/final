@@ -1,0 +1,44 @@
+<style>
+  h2 {
+    color: white;
+    background: #006;
+    padding: 6px;
+    text-align: center;
+  }
+  .price {
+    color: green;
+    border: solid 3px green;
+    padding: 4px;
+  }
+  img {
+    float: left;
+    margin-right: 40px;
+    box-shadow: 8px 8px 4px gray;
+    height: "200px";
+  }
+  p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+</style>
+
+<h2><%= @pro.name %></h2>
+
+<p>
+  <%= link_to "Edit Pro", "/pros/#{@pro.id}/edit" %>
+</p>
+
+<h4><%= @driver.name %></h4>
+<div>
+<%= image_tag @driver.driver_url, size: '500x500' %>
+</div>
+<h4><%= @iron.name %></h4>
+<div>
+<%= image_tag @iron.iron_url, size: '500x500' %>
+</div>
+<h4><%= @ball.name %></h4>
+<div>
+<%= image_tag @ball.ball_url, size: '500x500' %>
+</div>
+
+

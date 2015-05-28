@@ -56,4 +56,15 @@ Iron.delete_all
   i.save
 end
 
+Pro.delete_all
+
+[
+  {:name => "Fake Golfer 1"},
+  {:name => "Fake Golfer 2"}
+].each do |pro_hash|
+  p = Pro.new
+  p.name = pro_hash[:name]
+  p.save
+end
+
 

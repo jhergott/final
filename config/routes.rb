@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :balls
   resources :drivers
   resources :irons
+  resources :pros
 
   resources :password_resets
   
