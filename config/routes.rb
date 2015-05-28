@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :drivers
   resources :irons
 
+  resources :password_resets
+  
 end
