@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527234614) do
+ActiveRecord::Schema.define(version: 20150531212646) do
 
   create_table "balls", force: :cascade do |t|
     t.string  "brand"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 20150527234614) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.string "auth_token"
+    t.string "password_reset_token"
   end
 
 end

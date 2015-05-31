@@ -11,15 +11,16 @@
 
   <div class="container">
 
-    <h1><%= link_to "Golf Stuff", "/" %>
+    <h1><%= link_to "Jake's Final", "/" %>
 
-      <small><%= link_to "Ball", '/balls' %></small>
-      <small><%= link_to "Driver", '/drivers' %></small>
-      <small><%= link_to "Iron", '/irons' %></small>
-      <small><%= link_to "Pro", '/pros' %></small>
+      <small><%= link_to "Balls", '/balls' %></small>
+      <small><%= link_to "Drivers", '/drivers' %></small>
+      <small><%= link_to "Irons", '/irons' %></small>
+      <small><%= link_to "Pros", '/pros' %></small>
 
       <div class="pull-right">
       <% if session["user_id"].present? %>
+        <small><%= User.find_by(id: session["user_id"]).email %></small>
         <small><%= link_to "Sign Out", "/logout", :method => 'delete' %></small>
       <% else %>
           <small><%= link_to "Sign Up", '/signup' %></small>
@@ -28,12 +29,6 @@
       </div>
 
     </h1>
-
-    <div class="pull-right">
-    <% if session["user_id"].present? %>
-        <h3>Welcome to Jake's Final, <%= User.find_by(id: session["user_id"]).email %>!</h3>
-    <% end %>
-    </div>
 
     <% if notice.present? %>
       <div class="alert alert-info"%>

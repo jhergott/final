@@ -5,7 +5,20 @@
   }
 </style>
 
-<p><%= link_to "Add a New Ball", "/balls/new" %></p>
+<%= form_tag balls_url, :method => "get" do %>
+
+  <%= text_field_tag :keyword %>
+  <%= submit_tag "Search" %>
+
+<% end %>
+
+<br>
+
+<% if session[:user_id].present? %>
+
+  <p><%= link_to "Add a New Ball", "/balls/new" %></p>
+
+<% end %>
 
 <ul>
 
