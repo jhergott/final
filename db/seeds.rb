@@ -58,6 +58,9 @@ Pro.delete_all
 ].each do |pro_hash|
   p = Pro.new
   p.name = pro_hash[:name]
+  p.driver_id = Driver.all.first.id
+  p.iron_id = Iron.all.first.id
+  p.ball_id = Ball.all.first.id
   p.save
 end
 

@@ -14685,3 +14685,519 @@ ActiveModel::MissingAttributeError (can't write unknown attribute `password_rese
   Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/jakehergott/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (106.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:51:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.2ms)[0m  SELECT  "balls".* FROM "balls" LIMIT 100
+  Rendered balls/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 226ms (Views: 213.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:51:56 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-31 17:51:57 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2015-05-31 17:51:59 -0500
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2015-05-31 17:52:01 -0500
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aWhAlq2dL8sTBv8st25+QvTvb/WKsZkkafhEC8X93fG2k2VbYR5kIUgXhBO4r2O/izM2Rho/JN8IcmMON2oW2g==", "email"=>"a", "commit"=>"Reset Password"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "a"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:01 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/balls/63" for ::1 at 2015-05-31 17:52:18 -0500
+Processing by BallsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UY2L/VGZfyYfohSaF4U7iVER7su5fpaSRvS1zIwgKLuOdq4wnRo0zESzb6UYRCZ0Ls23eCnwK2knfpLJfrfjkA==", "id"=>"63"}
+  [1m[35mBall Load (0.2ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 63]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:18 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/balls/64" for ::1 at 2015-05-31 17:52:19 -0500
+Processing by BallsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Geb1E5iJixlvWTjw5/7ZKf4wylDFNwdK++ZTbyvF1Y3nL4ZguFtxj6sH9zMXuaZ2CSamtOaYeZKZb5ITjjcfQ==", "id"=>"64"}
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 64]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:19 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/balls/65" for ::1 at 2015-05-31 17:52:20 -0500
+Processing by BallsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ZyOePgJZGMgSWWq5NWuGbK3us88kEet26YoUUlWlzYqZ6u1NIoviXtYHpXrFLPkzWvjfKwe+la6LA9Uu8FcHQ==", "id"=>"65"}
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 65]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:20 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/balls/66" for ::1 at 2015-05-31 17:52:20 -0500
+Processing by BallsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NGtdpcXNoMaSDsYHH6ue7A7bfHHXY3dfG12VsUo1P43rkHhoCU7rLMkfvTgQaoMRcQclwkftyqR617K0uKL0pg==", "id"=>"66"}
+  [1m[35mBall Load (0.2ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 66]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:20 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/balls/66" for ::1 at 2015-05-31 17:52:21 -0500
+Processing by BallsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 66]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", "66"]]
+  Rendered balls/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/balls/66/edit" for ::1 at 2015-05-31 17:52:24 -0500
+Processing by BallsController#edit as HTML
+  Parameters: {"id"=>"66"}
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1  [["id", 66]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:24 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers" for ::1 at 2015-05-31 17:52:25 -0500
+Processing by DriversController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" LIMIT 100
+  Rendered drivers/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/51" for ::1 at 2015-05-31 17:52:26 -0500
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 51]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", "51"]]
+  Rendered drivers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/51/edit" for ::1 at 2015-05-31 17:52:28 -0500
+Processing by DriversController#edit as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 51]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:28 -0500
+Processing by BallsController#index as HTML
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls" LIMIT 100
+  Rendered balls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers" for ::1 at 2015-05-31 17:52:29 -0500
+Processing by DriversController#index as HTML
+  [1m[36mDriver Load (0.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers" LIMIT 100[0m
+  Rendered drivers/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/50" for ::1 at 2015-05-31 17:52:30 -0500
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 50]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  Rendered drivers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-31 17:52:35 -0500
+Processing by IronsController#index as HTML
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" LIMIT 100
+  Rendered irons/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/irons/44" for ::1 at 2015-05-31 17:52:36 -0500
+Processing by IronsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", "44"]]
+  Rendered irons/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pros" for ::1 at 2015-05-31 17:52:37 -0500
+Processing by ProsController#index as HTML
+  [1m[36mPro Load (0.2ms)[0m  [1mSELECT  "pros".* FROM "pros" LIMIT 100[0m
+  Rendered pros/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pros/11" for ::1 at 2015-05-31 17:52:38 -0500
+Processing by ProsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPro Load (0.2ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  Rendered pros/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pros/11/edit" for ::1 at 2015-05-31 17:52:39 -0500
+Processing by ProsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:39 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/irons" for ::1 at 2015-05-31 17:52:42 -0500
+Processing by IronsController#index as HTML
+  [1m[35mIron Load (0.3ms)[0m  SELECT  "irons".* FROM "irons" LIMIT 100
+  Rendered irons/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pros" for ::1 at 2015-05-31 17:52:42 -0500
+Processing by ProsController#index as HTML
+  [1m[36mPro Load (0.1ms)[0m  [1mSELECT  "pros".* FROM "pros" LIMIT 100[0m
+  Rendered pros/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/pros/10" for ::1 at 2015-05-31 17:52:48 -0500
+Processing by ProsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mozFSv8kz7PW9Q9788Yob8d7jlP9YoZdNH6JDoU5APJFd+CHM6eEWY3kdET8BzWSuKfX4G3sO6ZV9K4Ld67L2Q==", "id"=>"10"}
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 17:52:48 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pros" for ::1 at 2015-05-31 17:52:50 -0500
+Processing by ProsController#index as HTML
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" LIMIT 100
+  Rendered pros/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pros/11" for ::1 at 2015-05-31 17:52:52 -0500
+Processing by ProsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPro Load (0.1ms)[0m  [1mSELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", "11"]]
+  Rendered pros/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (8.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "balls"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Bridgestone"], ["name", "Bridgestone Tour B330"], ["price", 4499], ["ball_url", "http://geg.gmncdn.com/wp-content/uploads/2012/01/bstone-ball.jpg"], ["compression", "High"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Titleist"], ["name", "Titleist ProV1"], ["price", 4999], ["ball_url", "http://www.titleist.com/images/pressreleases/PROV1_flat.jpg"], ["compression", "High"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist DT Solo"], ["price", 1999], ["ball_url", "http://www.palmbeachgolfcenter.com/images/products/detail/titleist_dt.jpg"], ["compression", "Mid"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "TaylorMade"], ["name", "TaylorMade SuperDeep"], ["price", 1999], ["ball_url", "http://demandware.edgesuite.net/aais_prd/on/demandware.static/Sites-TMaG-Site/Sites-tmag-master-catalog/default/v1430641053918/hero/Super-Deep_Ball-Package_Lid_zoom.jpg"], ["compression", "Low"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "drivers"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Nike"], ["name", "Nike Vapor Pro Driver"], ["price", 39900], ["driver_url", "http://www.mcguirksgolf.com/v4/a636a571-361b-4659-a8dc-bf75b5a14aac/uploads/Nike%20Vapor%20Pro%20Driver%202.png"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)  [["brand", "Ping"], ["name", "Ping G30 SF Tec Driver"], ["price", 34900], ["driver_url", "http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg"], ["launch", "High"], ["spin", "Mid"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Callaway"], ["name", "Callaway XR Pro Driver"], ["price", 39900], ["driver_url", "http://www.pgatour.com/content/pgatour/equipmentreport/2015/01/15/callaway-xr-driver/_jcr_content/mainParsys/blog/blogLeftParsys/image.img.jpg/1421354971163.jpg"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "irons"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Cobra"], ["name", "Cobra Fly-Z Irons"], ["price", 80000], ["iron_url", "http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg"], ["category", "Game-Improvement"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist AP2 714 Irons"], ["price", 110000], ["iron_url", "http://www.mygolfspy.com/wp-content/uploads/2013/09/Titleist-714-AP2.jpg"], ["category", "Better-Player"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Ping"], ["name", "Ping Kartsen Irons"], ["price", 65000], ["iron_url", "http://pinggolf-blob.ping.com/pinggolf/uploadedimages/clubs/irons/karsten/beauty.png"], ["category", "Max Game-Improvement"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "pros"[0m
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" LIMIT 1
+  [1m[36mBall Load (0.2ms)[0m  [1mSELECT "balls".* FROM "balls"[0m
+  [1m[35mBall Load (0.2ms)[0m  SELECT  "balls".* FROM "balls" LIMIT 1
+  [1m[36mDriver Load (0.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_ball_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_iron_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pros_on_driver_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "balls"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Bridgestone"], ["name", "Bridgestone Tour B330"], ["price", 4499], ["ball_url", "http://geg.gmncdn.com/wp-content/uploads/2012/01/bstone-ball.jpg"], ["compression", "High"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Titleist"], ["name", "Titleist ProV1"], ["price", 4999], ["ball_url", "http://www.titleist.com/images/pressreleases/PROV1_flat.jpg"], ["compression", "High"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist DT Solo"], ["price", 1999], ["ball_url", "http://www.palmbeachgolfcenter.com/images/products/detail/titleist_dt.jpg"], ["compression", "Mid"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "balls" ("brand", "name", "price", "ball_url", "compression") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "TaylorMade"], ["name", "TaylorMade SuperDeep"], ["price", 1999], ["ball_url", "http://demandware.edgesuite.net/aais_prd/on/demandware.static/Sites-TMaG-Site/Sites-tmag-master-catalog/default/v1430641053918/hero/Super-Deep_Ball-Package_Lid_zoom.jpg"], ["compression", "Low"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "drivers"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Nike"], ["name", "Nike Vapor Pro Driver"], ["price", 39900], ["driver_url", "http://www.mcguirksgolf.com/v4/a636a571-361b-4659-a8dc-bf75b5a14aac/uploads/Nike%20Vapor%20Pro%20Driver%202.png"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)  [["brand", "Ping"], ["name", "Ping G30 SF Tec Driver"], ["price", 34900], ["driver_url", "http://www.golfsmith.com/_site_images/pp_copy/g30_driver_variable_thickness_face.jpg"], ["launch", "High"], ["spin", "Mid"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("brand", "name", "price", "driver_url", "launch", "spin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["brand", "Callaway"], ["name", "Callaway XR Pro Driver"], ["price", 39900], ["driver_url", "http://www.pgatour.com/content/pgatour/equipmentreport/2015/01/15/callaway-xr-driver/_jcr_content/mainParsys/blog/blogLeftParsys/image.img.jpg/1421354971163.jpg"], ["launch", "Low"], ["spin", "Low"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "irons"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Cobra"], ["name", "Cobra Fly-Z Irons"], ["price", 80000], ["iron_url", "http://www.golfwrx.com/wp-content/uploads/2014/12/CobraFlyZForged.jpg"], ["category", "Game-Improvement"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)  [["brand", "Titleist"], ["name", "Titleist AP2 714 Irons"], ["price", 110000], ["iron_url", "http://www.mygolfspy.com/wp-content/uploads/2013/09/Titleist-714-AP2.jpg"], ["category", "Better-Player"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "irons" ("brand", "name", "price", "iron_url", "category") VALUES (?, ?, ?, ?, ?)[0m  [["brand", "Ping"], ["name", "Ping Kartsen Irons"], ["price", 65000], ["iron_url", "http://pinggolf-blob.ping.com/pinggolf/uploadedimages/clubs/irons/karsten/beauty.png"], ["category", "Max Game-Improvement"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "pros"[0m
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons"  ORDER BY "irons"."id" ASC LIMIT 1[0m
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls"  ORDER BY "balls"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pros" ("name", "driver_id", "iron_id", "ball_id") VALUES (?, ?, ?, ?)  [["name", "Fake Golfer 1"], ["driver_id", 55], ["iron_id", 49], ["ball_id", 72]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[36mIron Load (0.1ms)[0m  [1mSELECT  "irons".* FROM "irons"  ORDER BY "irons"."id" ASC LIMIT 1[0m
+  [1m[35mBall Load (0.1ms)[0m  SELECT  "balls".* FROM "balls"  ORDER BY "balls"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pros" ("name", "driver_id", "iron_id", "ball_id") VALUES (?, ?, ?, ?)  [["name", "Fake Golfer 2"], ["driver_id", 55], ["iron_id", 49], ["ball_id", 72]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/pros" for ::1 at 2015-05-31 18:02:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProsController#index as HTML
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" LIMIT 100
+  Rendered pros/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 230ms (Views: 218.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pros/12" for ::1 at 2015-05-31 18:02:21 -0500
+Processing by ProsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPro Load (0.2ms)[0m  [1mSELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 55]]
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", 72]]
+  Rendered pros/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 49ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pros" for ::1 at 2015-05-31 18:02:33 -0500
+Processing by ProsController#index as HTML
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" LIMIT 100
+  Rendered pros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pros/13" for ::1 at 2015-05-31 18:02:34 -0500
+Processing by ProsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPro Load (0.1ms)[0m  [1mSELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 55]]
+  [1m[35mIron Load (0.1ms)[0m  SELECT  "irons".* FROM "irons" WHERE "irons"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" WHERE "balls"."id" = ? LIMIT 1[0m  [["id", 72]]
+  Rendered pros/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pros/13/edit" for ::1 at 2015-05-31 18:02:45 -0500
+Processing by ProsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPro Load (0.1ms)[0m  SELECT  "pros".* FROM "pros" WHERE "pros"."id" = ? LIMIT 1  [["id", 13]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 18:02:45 -0500
+Processing by BallsController#index as HTML
+  [1m[36mBall Load (0.1ms)[0m  [1mSELECT  "balls".* FROM "balls" LIMIT 100[0m
+  Rendered balls/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.1ms)
